@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Managers.Input.KeyAction -= OnKeyboard;
-        Managers.Input.KeyAction += OnKeyboard;
+        Managers.Input.KeyAction += OnKeyboard; //다른곳에 호출했을수도 있으니 초기화
     }
 
     // Update is called once per frame
@@ -41,6 +41,6 @@ public class PlayerController : MonoBehaviour
         {
             transform.position += Vector3.right * Time.deltaTime * _speed;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.right), 0.1f);
-        }
+        }     
     }
 }
