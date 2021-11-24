@@ -6,7 +6,7 @@ using UnityEngine;
 public class InputManager
 {
     public Action KeyAction = null;
-    public void OnUpdate()
+    public void OnUpdate() //입력된게 있으면 실행
     {
         if(Input.anyKey == false)
         {
